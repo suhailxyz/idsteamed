@@ -26,7 +26,7 @@ go build -o bin/idsteamed main.go
 ./idsteamed [flags] <input_file.txt>
 ```
 
-### Flags
+### Flags (Optional)
 
 - `--output <dir>` - Output directory (default: "output")
 - `--workers <n>` - Number of concurrent workers (default: 8)
