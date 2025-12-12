@@ -6,7 +6,7 @@ Automates the process of looking up Steam game IDs, and creating individual file
 
 ## Getting Started
 
-**Easiest way:** Download the pre-built binary for your platform and run it. No installation needed.
+**Easiest way:** Use the pre-built binary in `bin/` directory. No installation needed.
 
 ```bash
 chmod +x idsteamed
