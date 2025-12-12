@@ -1,4 +1,4 @@
-# Steam Game ID Finder
+# idsteamed
 
 Automates the process of looking up Steam game IDs, and creating individual files for each game. This is used for adding games from GameHub Lite to emulation frontends like ES-DE and Beacon. The tool processes a text file with Steam game names and generates individual `.steam` files with game IDs.
 
@@ -9,21 +9,21 @@ Automates the process of looking up Steam game IDs, and creating individual file
 **Easiest way:** Download the pre-built binary for your platform and run it. No installation needed.
 
 ```bash
-chmod +x steam_id_finder
-./steam_id_finder games.txt
+chmod +x idsteamed
+./idsteamed games.txt
 ```
 
 Or if building from source, the binary will be in the `bin/` directory:
 
 ```bash
-go build -o bin/steam_id_finder main.go
-./bin/steam_id_finder games.txt
+go build -o bin/idsteamed main.go
+./bin/idsteamed games.txt
 ```
 
 ## Usage
 
 ```bash
-./steam_id_finder [flags] <input_file.txt>
+./idsteamed [flags] <input_file.txt>
 ```
 
 ### Flags
@@ -36,9 +36,9 @@ go build -o bin/steam_id_finder main.go
 ### Examples
 
 ```bash
-./steam_id_finder games.txt
-./steam_id_finder --output my_games --workers 16 games.txt
-./steam_id_finder --skip-existing --verbose games.txt
+./idsteamed games.txt
+./idsteamed --output my_games --workers 16 games.txt
+./idsteamed --skip-existing --verbose games.txt
 ```
 
 ## Input Format
@@ -62,15 +62,15 @@ Creates `.steam` files in the output directory. Each file contains a single line
 If you want to build it yourself:
 
 ```bash
-go build -o steam_id_finder main.go
+go build -o idsteamed main.go
 ```
 
 Cross-platform builds:
 
 ```bash
-GOOS=darwin GOARCH=arm64 go build -o steam_id_finder main.go    # Mac
-GOOS=linux GOARCH=amd64 go build -o steam_id_finder main.go     # Linux
-GOOS=windows GOARCH=amd64 go build -o steam_id_finder.exe main.go  # Windows
+GOOS=darwin GOARCH=arm64 go build -o idsteamed main.go    # Mac
+GOOS=linux GOARCH=amd64 go build -o idsteamed main.go     # Linux
+GOOS=windows GOARCH=amd64 go build -o idsteamed.exe main.go  # Windows
 ```
 ## Extracting Game Titles from Screenshots
 

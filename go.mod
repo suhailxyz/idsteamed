@@ -1,3 +1,3 @@
-module github.com/steam-id-finder
+module github.com/idsteamed
 
 go 1.25.5
